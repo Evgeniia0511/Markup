@@ -46,7 +46,7 @@ gulp.task('js-assets', function(){
     ])
         .pipe(concat('js-assets.js'))
         .pipe(minify())
-        .pipe(gulp.dest('public/dist'));
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', ['browserSync'], function(){
