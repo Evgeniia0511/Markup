@@ -17,9 +17,10 @@ gulp.task('sass', function() {
 
 gulp.task('css', function() {
     return gulp.src([
+        "bower_components/font-awesome/css/font-awesome.min.css",
         "bower_components/bootstrap/dist/css/bootstrap.min.css",
-        "bower_components/owl-carousel/owl-carousel.css",
-        "bower_components/owl-carousel/owl.transitions.css"
+        "bower_components/owl-carousel/owl-carousel/owl.carousel.css",
+        "bower_components/owl-carousel/owl-carousel/owl.transitions.css"
     ])
         .pipe(concat('assets.css'))
         .pipe(cssmin())
@@ -42,7 +43,7 @@ gulp.task('js-assets', function(){
         "bower_components/jquery/dist/jquery.min.js",
         "bower_components/bootstrap/dist/js/bootstrap.min.js",
         "bower_components/javascript-equal-height-responsive-rows/grids.min.js",
-        "bower_components/owl-carousel/owl-carousel.min.js"
+        "bower_components/owl-carousel/owl-carousel/owl.carousel.min.js"
     ])
         .pipe(concat('js-assets.js'))
         .pipe(minify())
